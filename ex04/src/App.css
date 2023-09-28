@@ -1,0 +1,29 @@
+div#app {
+  margin: 20px auto;
+  padding: 20px;
+  width: 300px;
+  border: 1px solid gray;
+  box-shadow: 4px 4px 4px #aaa;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 15pt;
+}
+
+div.control {
+  margin-bottom: 1em;
+}
+
+input {
+  padding: 0.3em;
+}
+
+select {
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+
+hr {
+  margin: 2em 0;
+}
