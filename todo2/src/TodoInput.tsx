@@ -11,7 +11,7 @@ function TodoInput({addTodo} : Props) {
     const onClick = () => {addTodo(title); setTitle('');}
     return (
         <div>
-            <input type="text" value={title} onChange={onChange}/>
+            <input id="titleInput" type="text" value={title} onChange={onChange}/>
             <button onClick={onClick}>추가</button>
         </div>
     )

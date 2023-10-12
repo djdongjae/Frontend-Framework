@@ -10,6 +10,28 @@
     margin: 0 0 20px 0;
 }
 
-.todoRoot input {
+.todoRoot #titleInput {
     padding: 6px;
+    width: 220px;
+}
+
+.todoRoot button {
+    margin-left: 5px;
+    padding: 3px 10px;
+}
+
+.todoRoot table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.todoRoot td {
+    border: 1px solid gray;
+    padding: 6px;
+    height: 10px;
+}
+
+.todoRoot thead {
+    background-color: #eee;
 }
