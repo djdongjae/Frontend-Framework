@@ -9,13 +9,19 @@ type Props = {
 function TodoItem({todo, toggleTodo} : Props) {
 
     const [done, setDone] = useState<boolean>(todo.done);
+    const [color, setColor] = useState(todo.done ? 'lightgray' : 'white');
+    const tdStyle = {
+        backgroundColor: color
+      };
+
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setDone(e.target.checked);
+        setColor(e.target.checked ? 'lightgray' : 'white');
         toggleTodo(todo.id);
     };
 
     return (
-        <tr>
+        <tr style={tdStyle}>
             <td>{todo.id}</td>
             <td>{todo.title}</td>
             <td>
