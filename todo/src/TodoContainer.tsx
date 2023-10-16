@@ -19,7 +19,20 @@ function TodoContainer() {
         setTodoList([...todoList]);
     }
 
-    return <TodoRoot todoList={todoList} addTodo={addTodo} />;
+    const toggleTodo : types.ToggleTodoFunc = (id: number) => {
+        for (let todo of todoList)
+            if (todo.id === id) {
+                todo.done = !todo.done;
+                setTodoList([...todoList]);
+                return;
+            }
+    }
+
+    const deleteTodo : types.DeleteTodoFunc = (id: number) => {
+        setTodoList(todoList.filter(todo => todo.id !== id));
+    }
+
+    return <TodoRoot todoList={todoList} addTodo={addTodo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>;
 }
 
 export default TodoContainer

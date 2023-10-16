@@ -6,15 +6,17 @@ import TodoList from './TodoList';
 
 type Props = {
     todoList: types.Todo[],
-    addTodo: types.AddTodoFunc
+    addTodo: types.AddTodoFunc,
+    toggleTodo: types.ToggleTodoFunc,
+    deleteTodo: types.DeleteTodoFunc
 }
 
-function TodoRoot({todoList, addTodo}: Props) {
+function TodoRoot({todoList, addTodo, toggleTodo, deleteTodo}: Props) {
     return (
         <div className="todoRoot">
             <h1>할일</h1>
             <TodoInput addTodo={addTodo}/>
-            <TodoList todoList={todoList}/>
+            <TodoList todoList={todoList} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
         </div>
     )
 }

@@ -5,3 +5,5 @@ export type Todo = {
 };
 
 export type AddTodoFunc = (text: string) => void;
+export type ToggleTodoFunc = (id: number) => void;
+export type DeleteTodoFunc = (id: number) => void;

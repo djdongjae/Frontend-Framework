@@ -3,11 +3,13 @@ import type * as types from './types'
 import TodoItem from "./TodoItem";
 
 type Props = {
-    todoList: types.Todo[]
+    todoList: types.Todo[],
+    toggleTodo: types.ToggleTodoFunc,
+    deleteTodo: types.DeleteTodoFunc
 }
 
-function TodoList({todoList}: Props) {
-    const trlist = todoList.map(todo => <TodoItem todo={todo} key={todo.id} />);
+function TodoList({todoList, toggleTodo, deleteTodo}: Props) {
+    const trlist = todoList.map(todo => <TodoItem todo={todo} key={todo.id} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />);
     return (
         <table>
             <thead>
