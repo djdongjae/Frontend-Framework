@@ -7,4 +7,4 @@ export type Student = {
 }
 
 export type AddStudentFunc = (name: string, age: number, gender: string, departmentId: number) => void;
-export type DeleteTodoFunc = (id: number) => void;
+export type DeleteStudentFunc = (id: number) => void;
