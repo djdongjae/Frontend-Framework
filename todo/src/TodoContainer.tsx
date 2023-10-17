@@ -15,17 +15,14 @@ function TodoContainer() {
         const lastIndex = todoList.length - 1;
         const lastId = todoList[lastIndex].id;
         const todo = {id: lastId + 1, title: title, done: false};
-        todoList.push(todo);
-        setTodoList([...todoList]);
+        setTodoList([...todoList, todo]);
     }
 
     const toggleTodo : types.ToggleTodoFunc = (id: number) => {
-        for (let todo of todoList)
-            if (todo.id === id) {
-                todo.done = !todo.done;
-                setTodoList([...todoList]);
-                return;
-            }
+        let newTodoList = todoList.map(
+            todo => todo.id !== id ? todo : {...todo, done: !todo.done}
+        );
+        setTodoList(newTodoList);
     }
 
     const deleteTodo : types.DeleteTodoFunc = (id: number) => {
