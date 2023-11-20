@@ -1,0 +1,12 @@
+.bookRoot { border: 1px solid gray; width: 400px; margin: 10px auto; 
+    box-shadow: 5px 5px 5px #DDD; padding: 30px; }
+.bookRoot h1 { margin: 0  0 20px 0; }
+.bookRoot div > input { padding: 6px; width: 280px; margin: 5px;}
+.bookRoot div button { margin-left: 5px; padding: 3px 10px; }
+.bookRoot table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+.bookRoot td { border: 1px solid gray; padding: 6px; }
+.bookRoot thead { background-color: #eee; text-align: center; }
+.bookRoot td:nth-child(1) { text-align: center; width: 30px; }
+.bookRoot span { float: right; font-weight: bold; cursor: pointer; }
+.bookRoot tr.done { color: #bbb; text-decoration: line-through; }
+
